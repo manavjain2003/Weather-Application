@@ -1,0 +1,126 @@
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: white;
+    --primary-text: #333;
+    --secondary-text: #666;
+    --accent-color: #3498db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--primary-text);
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.weather-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.weather-info {
+    text-align: left;
+}
+
+.location-info h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.location-info p {
+    color: var(--secondary-text);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.temperature-info h3 {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.temperature-info p {
+    color: var(--secondary-text);
+    margin-bottom: 15px;
+}
+
+.additional-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0 5px;
+}
+
+.info-item span {
+    display: block;
+    color: var(--secondary-text);
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-weight: 600;
+}

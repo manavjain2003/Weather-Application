@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <h1>Weather Forecast</h1>
+            <div class="search-container">
+                <input type="text" id="city" placeholder="Enter City Name">
+                <button id="searchBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div id="weatherInfo" class="weather-info">
+                <div class="location-info">
+                    <h2 id="cityName">-</h2>
+                    <p id="currentDate">-</p>
+                </div>
+                <div class="temperature-info">
+                    <h3 id="temperature">-°C</h3>
+                    <p id="weatherDescription">-</p>
+                </div>
+                <div class="additional-info">
+                    <div class="info-item">
+                        <span>Humidity</span>
+                        <p id="humidity">-</p>
+                    </div>
+                    <div class="info-item">
+                        <span>Wind</span>
+                        <p id="windSpeed">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
