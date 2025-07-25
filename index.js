@@ -7,7 +7,8 @@ const temperature = document.getElementById("temperature");
 const weatherDescription = document.getElementById("weatherDescription");
 const humidity = document.getElementById("humidity");
 const windSpeed = document.getElementById("windSpeed");
-
+const feelslike = document.getElementById("feelsLike");
+const visibility = document.getElementById("visibility");
 
 searchBtn.addEventListener("click", function() {  
     const city = cityInput.value;
@@ -32,7 +33,9 @@ async function fetchWeather(city) {
         temperature.textContent = `Temperature: ${data.current.temp_c}°C`;
         weatherDescription.textContent = `Weather: ${data.current.condition.text}`;
         humidity.textContent = `Humidity: ${data.current.humidity}%`;
-        windSpeed.textContent = `Wind: ${data.current.wind_mph}`
+        windSpeed.textContent = `Wind: ${data.current.wind_mph}`;
+        visibility.textContent = `Visibility ${data.current.vis_km} km`;
+        feelslike.textContent = `Feels like ${data.current.feelslike_c}`
         weatherInfo.style.display = "block"; 
     } catch (error) {
         alert("Error fetching weather data.");
